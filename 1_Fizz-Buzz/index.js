@@ -1,8 +1,8 @@
 // Classic Fizz-Buzz
-// Write a function that takes in a number and will return "Fizz" if it's divisible by 3, "Buzz" if divisible by 5, or "Fizz-Buzz" if divisible by 15
+// Write a function that takes in a number and will return "Fizz" if it's divisible by 3, "Buzz" if divisible by 5, or "Fizz-Buzz" if divisible by both
 
 const fizzBuzz = num => {
-  if (num % 15 === 0) {
+  if (num % 3 === 0 && num % 5 === 0) {
     return 'Fizz-Buzz'
   } else if (num % 3 === 0) {
     return 'Fizz'
@@ -22,7 +22,7 @@ console.log(fizzBuzz(4))
 // or using a Ternary expression
 
 const fizzBuzzTernary = num => {
-  return num % 15 === 0
+  return num % 3 === 0 && num % 5 === 0
     ? 'Fizz-Buzz'
     : num % 3 === 0
       ? 'Fizz'
